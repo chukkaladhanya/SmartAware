@@ -36,35 +36,6 @@ A minimal Android application that monitors WiFi and cellular network changes, s
 - **Min SDK**: 30 (Android 11)
 - **Target SDK**: 34 (Android 14)
 
-## Project Structure 📁
-
-```
-SmartAware/
-├── app/
-│   ├── src/main/
-│   │   ├── java/com/smartaware/monitor/
-│   │   │   ├── data/                  # Room database & entities
-│   │   │   │   ├── NetworkEvent.kt
-│   │   │   │   ├── NetworkEventDao.kt
-│   │   │   │   ├── AppDatabase.kt
-│   │   │   │   └── Converters.kt
-│   │   │   ├── service/               # Background services
-│   │   │   │   ├── NetworkMonitorService.kt
-│   │   │   │   └── NetworkStateReceiver.kt
-│   │   │   ├── worker/                # Periodic tasks
-│   │   │   │   └── WiFiReminderWorker.kt
-│   │   │   ├── ui/                    # Compose UI
-│   │   │   │   ├── DashboardScreen.kt
-│   │   │   │   └── theme/Theme.kt
-│   │   │   ├── util/                  # Utilities
-│   │   │   │   ├── NetworkUtils.kt
-│   │   │   │   └── NotificationHelper.kt
-│   │   │   └── MainActivity.kt
-│   │   └── AndroidManifest.xml
-│   └── build.gradle.kts
-└── build.gradle.kts
-```
-
 ## Prerequisites 📋
 
 ### Required
@@ -145,9 +116,7 @@ The app requests **minimal, safe permissions**:
 ✅ **READ_PHONE_STATE** - Detect cellular network type  
 ✅ **INTERNET** - (Not used, but standard for network apps)
 
-❌ **NO** Location permissions  
-❌ **NO** Overlay permissions  
-❌ **NO** Dangerous permissions
+
 
 ## How It Works 🔍
 
@@ -186,19 +155,6 @@ The app requests **minimal, safe permissions**:
    - Every 6 hours, checks if WiFi is being used
    - Sends gentle reminder to turn on WiFi for battery savings
 
-## Differences from Stellar Repo ⚡
-
-This project is completely different from the Stellar `android_smart` repository:
-
-| **Stellar Repo** | **SmartAware** |
-|------------------|--------------|
-| Complex C++ native libraries | Pure Kotlin, no native code |
-| QUIC/BoringSSL/libevent | Standard Android APIs only |
-| Multi-flavor builds | Single build variant |
-| Video transcoding, charts | No heavy libraries |
-| Enterprise-focused | User-focused simplicity |
-| Multiple modules | Single app module |
-| Firebase integration | No Firebase |
 
 ## Troubleshooting 🔧
 
@@ -245,14 +201,4 @@ export JAVA_HOME=<path-to-jdk>  # macOS/Linux
 - [ ] Dark/Light theme toggle
 - [ ] Log filtering by date range
 
-## License 📄
 
-This project is for educational purposes. Feel free to use and modify.
-
-## Contributing 🤝
-
-This is a personal college project, but suggestions are welcome!
-
----
-
-**Built with ❤️ for efficient network monitoring**
