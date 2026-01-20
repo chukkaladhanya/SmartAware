@@ -53,7 +53,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_NETWORK)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.ic_stat_network)
             .setContentTitle("📶 WiFi Connected")
             .setContentText("Signal: $signalStrength% ($signalLevel)")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -75,7 +75,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_NETWORK)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.ic_stat_network)
             .setContentTitle("📱 Using Mobile Data")
             .setContentText("Network Type: $networkType")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -97,7 +97,7 @@ object NotificationHelper {
         )
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID_REMINDER)
-            .setSmallIcon(android.R.drawable.ic_dialog_alert)
+            .setSmallIcon(com.smartaware.monitor.R.drawable.ic_stat_network)
             .setContentTitle("⏰ WiFi Reminder")
             .setContentText("Turn on WiFi to save battery!")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
