@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartAware</string>
+    <string name="network_status">Network Status</string>
+    <string name="event_logs">Event Logs</string>
+    <string name="no_events">No events logged yet</string>
+</resources>
